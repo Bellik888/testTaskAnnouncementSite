@@ -1,0 +1,23 @@
+.list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  background-color: rgb(63, 63, 189);
+  margin-bottom: 40px;
+  height: 50px;
+  padding: 15px;
+  padding-left: 40px;
+  gap: 25px;
+}
+.link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-decoration: none;
+  font-family: serif;
+  font-size: 20px;
+}
+.active {
+  font-size: 25px;
+}

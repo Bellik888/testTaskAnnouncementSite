@@ -1,6 +1,12 @@
 import { useHistory } from 'react-router-dom';
 import { useState } from 'react/cjs/react.development';
 
+let today = new Date();
+let dd = String(today.getDate()).padStart(2, '0');
+let mm = String(today.getMonth() + 1).padStart(2, '0');
+let yyyy = today.getFullYear();
+let todayDate = `${dd}.${mm}.${yyyy}`;
+
 export const EditPage = ({ editorAnnouncement, editedAnnouncement }) => {
   const [title, setTitle] = useState(editorAnnouncement.title);
   const [description, setDescription] = useState(
@@ -10,7 +16,7 @@ export const EditPage = ({ editorAnnouncement, editedAnnouncement }) => {
   let editedAnn = {
     title,
     description,
-    date: editorAnnouncement.date,
+    date: todayDate,
     id: editorAnnouncement.id,
   };
 

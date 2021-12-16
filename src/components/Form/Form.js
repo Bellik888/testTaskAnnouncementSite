@@ -1,11 +1,13 @@
 import { useState } from 'react';
 import { nanoid } from 'nanoid';
+import { BsPlusCircleFill } from 'react-icons/bs';
+
+import s from './Form.module.css';
 
 let today = new Date();
 let dd = String(today.getDate()).padStart(2, '0');
-let mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+let mm = String(today.getMonth() + 1).padStart(2, '0');
 let yyyy = today.getFullYear();
-// today = dd + '/' + mm + '/' + yyyy;
 let todayDate = `${dd}.${mm}.${yyyy}`;
 
 export const Form = ({ addNewAnnouncement }) => {
@@ -34,13 +36,6 @@ export const Form = ({ addNewAnnouncement }) => {
     }
     return true;
   };
-
-  // const resetForm = () => {
-  //     setTitle('');
-  //     setDescription('');
-  //     // setDate('');
-  // }
-
   const handleSubmitForm = e => {
     e.preventDefault();
     addNewAnnouncement(newAnnouncement);
@@ -50,14 +45,18 @@ export const Form = ({ addNewAnnouncement }) => {
   };
 
   return (
-    <form onSubmit={handleSubmitForm}>
+    <form onSubmit={handleSubmitForm} className={s.form}>
       <input
         type="text"
-        style={{ display: 'block' }}
         onChange={onChangeTitle}
+        placeholder="Title..."
+        className={s.input}
       />
-      <textarea cols="30" rows="10" onChange={onChangeDescription}></textarea>
-      <button disabled={isDisabled()}>Add</button>
+      <textarea onChange={onChangeDescription} className={s.text}></textarea>
+      <button disabled={isDisabled()} className={s.btn}>
+        <BsPlusCircleFill className={s.icon} />
+      </button>
     </form>
   );
 };
+// BsPlusCircleFill

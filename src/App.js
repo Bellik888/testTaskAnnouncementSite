@@ -6,6 +6,7 @@ import { Home } from './view/Home/Home';
 import { Nav } from './view/Nav/Nav';
 import { NewAnnouncement } from './view/NewAnnouncement/NewAnnouncement';
 import { EditPage } from './view/EditPage/EditPage';
+import { Details } from './view/Details/Details';
 
 function App() {
   const [announcementList, setAnnouncementList] = useState(
@@ -54,24 +55,29 @@ function App() {
       <header>
         <Nav />
       </header>
-      <Switch>
-        <Route path="/new">
-          <NewAnnouncement addNewAnnouncement={addNewAnnouncement} />
-        </Route>
-        <Route exact path="/">
-          <Home
-            announcementList={announcementList}
-            deleteAnnouncement={deleteAnnouncement}
-            onEditAnnouncement={onEditAnnouncement}
-          />
-        </Route>
-        <Route exact path="/edit">
-          <EditPage
-            editorAnnouncement={editorAnnouncement}
-            editedAnnouncement={editedAnnouncement}
-          />
-        </Route>
-      </Switch>
+      <main>
+        <Switch>
+          <Route path="/new">
+            <NewAnnouncement addNewAnnouncement={addNewAnnouncement} />
+          </Route>
+          <Route exact path="/">
+            <Home
+              announcementList={announcementList}
+              deleteAnnouncement={deleteAnnouncement}
+              onEditAnnouncement={onEditAnnouncement}
+            />
+          </Route>
+          <Route exact path="/edit">
+            <EditPage
+              editorAnnouncement={editorAnnouncement}
+              editedAnnouncement={editedAnnouncement}
+            />
+          </Route>
+          <Route exact path="/announcement/:announcementId">
+            <Details />
+          </Route>
+        </Switch>
+      </main>
     </div>
   );
 }
