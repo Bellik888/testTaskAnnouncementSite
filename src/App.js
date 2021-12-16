@@ -29,7 +29,7 @@ function App() {
   }, [announcementList, editorAnnouncement]);
 
   const addNewAnnouncement = newAnnouncement => {
-    setAnnouncementList(prev => [...prev, newAnnouncement]);
+    setAnnouncementList(prev => [newAnnouncement, ...prev]);
     history.push('/');
   };
   const deleteAnnouncement = id => {
@@ -74,7 +74,10 @@ function App() {
             />
           </Route>
           <Route exact path="/announcement/:announcementId">
-            <Details />
+            <Details
+              onEditAnnouncement={onEditAnnouncement}
+              deleteAnnouncement={deleteAnnouncement}
+            />
           </Route>
         </Switch>
       </main>

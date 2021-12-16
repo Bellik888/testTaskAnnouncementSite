@@ -1,0 +1,41 @@
+.form {
+  padding: 30px;
+  margin-left: 50px;
+  margin-right: 50px;
+  border-radius: 15px;
+  font-family: serif;
+  font-size: 20px;
+  border: 3px solid rgb(63, 63, 189);
+  background-color: rgb(189, 206, 252);
+}
+.input {
+  display: block;
+  min-width: 600px;
+  height: 40px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 20px;
+  padding-left: 10px;
+  border: 1px solid rgb(63, 63, 189);
+  border-radius: 10px;
+}
+.text {
+  width: 100%;
+  min-height: 400px;
+  padding: 20px;
+  border: 1px solid rgb(63, 63, 189);
+  border-radius: 10px;
+}
+.btn {
+  margin-top: 20px;
+  border: none;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background-color: transparent;
+  cursor: pointer;
+}
+.icon {
+  font-size: 50px;
+  color: rgb(63, 63, 189);
+}

@@ -1,6 +1,8 @@
 import { useState } from 'react/cjs/react.development';
 import { AnnouncementList } from '../../components/AnnouncementList/AnnouncementList';
 import { Filter } from '../../components/Filter/Filter';
+import s from './Home.module.css';
+
 export const Home = ({
   announcementList,
   deleteAnnouncement,
@@ -13,7 +15,7 @@ export const Home = ({
   };
   return (
     <>
-      <h1>Announcement</h1>
+      <h1 className={s.title}>ANNOUNCEMENT</h1>
       <Filter onSubmitFilter={onSubmitFilter} />
       <AnnouncementList
         announcementList={announcementList}

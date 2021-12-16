@@ -1,0 +1,13 @@
+.input {
+  display: block;
+  min-width: 600px;
+  height: 40px;
+  /* margin-right: auto;
+  margin-left: auto; */
+  margin-left: 30px;
+  margin-bottom: 20px;
+  padding-left: 10px;
+  border: 1px solid rgb(63, 63, 189);
+  color: rgb(52, 52, 151);
+  border-radius: 10px;
+}

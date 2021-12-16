@@ -1,6 +1,10 @@
-p {
+.title {
   margin: 0;
   padding: 0;
+  padding-top: 30px;
+  /* text-align: center; */
+  margin-left: 50px;
+  color: rgb(63, 63, 189);
 }
 .list {
   display: flex;
@@ -11,7 +15,8 @@ p {
   padding: 20px;
   padding-left: 20px;
   list-style: none;
-  border: 3px solid rgb(63, 63, 189);
+  border: 2px solid rgb(63, 63, 189);
+  background-color: #fff;
 }
 .item {
   display: flex;
@@ -20,6 +25,7 @@ p {
   padding: 20px;
   border: 1px solid rgb(63, 63, 189);
   border-radius: 10px;
+  background-color: rgb(204, 216, 252);
 }
 .titleAnn {
   padding: 5px 0;
@@ -34,26 +40,5 @@ p {
 }
 .link {
   text-decoration: none;
-  color: rgb(63, 63, 189);
-}
-.btnWrapper {
-  display: flex;
-  gap: 15px;
-  align-items: center;
-}
-.btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 20px;
-  border: 1px solid rgb(63, 63, 189);
-  width: 45px;
-  height: 45px;
-  border-radius: 20%;
-  background-color: transparent;
-  cursor: pointer;
-}
-.icon {
-  font-size: 25px;
   color: rgb(63, 63, 189);
 }

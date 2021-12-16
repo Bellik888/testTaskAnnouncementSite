@@ -15,10 +15,9 @@ export const AnnouncementList = ({
           announcementList.map(({ title, description, date, id }) =>
             filter === '' ? (
               <li key={title} className={s.item}>
-                <Link to={`/announcement/${id}`}>
+                <Link to={`/announcement/${id}`} className={s.link}>
                   <div className={s.textWrapper}>
-                    <p className={s.title}>{title}</p>
-                    {/* <p className={s.descr}>{description}</p> */}
+                    <h2 className={s.titleAnn}>{title}</h2>
                     <p className={s.date}>{date}</p>
                   </div>
                 </Link>
@@ -45,10 +44,9 @@ export const AnnouncementList = ({
             ) : (
               title.toLowerCase().includes(filter.toLowerCase()) && (
                 <li key={title} className={s.item}>
-                  <Link to={`/announcement/${id}`}>
+                  <Link to={`/announcement/${id}`} className={s.link}>
                     <div className={s.textWrapper}>
-                      <p className={s.title}>{title}</p>
-                      {/* <p className={s.item}>{description}</p> */}
+                      <p className={s.titleAnn}>{title}</p>
                       <p className={s.date}>{date}</p>
                     </div>
                   </Link>

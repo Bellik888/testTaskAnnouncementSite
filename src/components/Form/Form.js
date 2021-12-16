@@ -52,7 +52,11 @@ export const Form = ({ addNewAnnouncement }) => {
         placeholder="Title..."
         className={s.input}
       />
-      <textarea onChange={onChangeDescription} className={s.text}></textarea>
+      <textarea
+        onChange={onChangeDescription}
+        placeholder="Enter your announcement here..."
+        className={s.text}
+      ></textarea>
       <button disabled={isDisabled()} className={s.btn}>
         <BsPlusCircleFill className={s.icon} />
       </button>

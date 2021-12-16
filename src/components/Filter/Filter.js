@@ -15,7 +15,12 @@ export const Filter = ({ onSubmitFilter }) => {
   };
   return (
     <div className={s.wrapper}>
-      <input onChange={onChangeFilter} type="text"></input>
+      <input
+        onChange={onChangeFilter}
+        type="text"
+        placeholder="Choose here..."
+        className={s.input}
+      ></input>
     </div>
   );
 };
