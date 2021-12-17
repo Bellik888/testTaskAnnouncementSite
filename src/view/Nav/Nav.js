@@ -10,7 +10,6 @@ export const Nav = () => {
       <NavLink to="/new" className={s.link} activeClassName={s.active}>
         Add
       </NavLink>
-      {/* <NavLink to="/announcement/:announcementId">Details</NavLink> */}
     </ul>
   );
 };

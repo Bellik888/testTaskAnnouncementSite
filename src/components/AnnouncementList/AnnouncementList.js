@@ -2,6 +2,8 @@ import s from './AnnouncementList.module.css';
 import { BsTrashFill, BsFillPencilFill } from 'react-icons/bs';
 import { Link } from 'react-router-dom';
 
+// render list of all announcements
+
 export const AnnouncementList = ({
   announcementList,
   deleteAnnouncement,

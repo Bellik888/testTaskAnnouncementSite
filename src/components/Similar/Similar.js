@@ -1,18 +1,21 @@
 import { Link } from 'react-router-dom';
 import s from './Similar.module.css';
 
+//render similar announcement for our choose announcement
 export const Similar = ({ title, id }) => {
   const allAnnouncement = JSON.parse(
     window.localStorage.getItem('announcementList'),
   );
   let arrFromTittle = title.toLowerCase().split(' ');
 
+  // check which elements similar to our and return similar word
   let filterArr = allAnnouncement.map((el, index) =>
     el.title
       .toLowerCase()
       .split(' ')
       .map(e => arrFromTittle.includes(e) && el),
   );
+  // use array with similar words to create newArray with similar object(use index)
   let similar = filterArr
     .map(el => el[0] !== false && el[0])
     .filter(e => e !== false)

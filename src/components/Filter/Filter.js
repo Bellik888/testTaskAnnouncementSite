@@ -2,6 +2,8 @@ import { useEffect } from 'react';
 import { useState } from 'react/cjs/react.development';
 import s from './Filter.module.css';
 
+// filter announcemets with text in input 'filter'
+
 export const Filter = ({ onSubmitFilter }) => {
   const [filter, setFilter] = useState('');
 
@@ -11,7 +13,6 @@ export const Filter = ({ onSubmitFilter }) => {
   }, [filter]);
   const onChangeFilter = e => {
     setFilter(e.target.value);
-    // onSubmitFilter(filter);
   };
   return (
     <div className={s.wrapper}>

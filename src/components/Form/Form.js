@@ -13,9 +13,8 @@ let todayDate = `${dd}.${mm}.${yyyy}`;
 export const Form = ({ addNewAnnouncement }) => {
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
-  // const [date, setDate] = useState('');
-  // const [id, setId] = useState(null);
 
+  // create obj wich send to announcementList
   let newAnnouncement = {
     title,
     description,
@@ -30,6 +29,7 @@ export const Form = ({ addNewAnnouncement }) => {
     setDescription(e.target.value);
   };
 
+  // for disabled btn when input empty
   const isDisabled = () => {
     if (title !== '' && description !== '') {
       return false;
@@ -39,7 +39,6 @@ export const Form = ({ addNewAnnouncement }) => {
   const handleSubmitForm = e => {
     e.preventDefault();
     addNewAnnouncement(newAnnouncement);
-    console.log(newAnnouncement);
     setTitle('');
     setDescription('');
   };
@@ -63,4 +62,3 @@ export const Form = ({ addNewAnnouncement }) => {
     </form>
   );
 };
-// BsPlusCircleFill
